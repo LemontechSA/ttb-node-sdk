@@ -10,14 +10,14 @@ describe('TimeBilling', () => {
       expect(TimeBilling.V2).toBeDefined()
     })
 
-    describe('Session', () => {
-      it('respond correctly', () => {
-        expect(TimeBilling.V2.Session).toBeDefined()
-      })
+    it('is a function', () => {
+      expect(typeof TimeBilling.V2).toBeDefined()
+    })
 
-      it('type is function', () => {
-        expect(typeof TimeBilling.V2.Session).toBe('function')
-      })
+    it('responds an instance', () => {
+      const V2 = TimeBilling.V2('lemontech')
+      expect(V2).toBeDefined()
+      expect(typeof V2).toBe('object')
     })
   })
 })

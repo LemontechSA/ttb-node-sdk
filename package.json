@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A SDK to communicate with TheTimeBilling Rest API",
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "babel src -d lib --ignore '**/*.test.js'",
     "lint-staged": "lint-staged",
     "test": "jest",
     "test:watch": "jest jest --watch --coverage",
@@ -23,7 +23,8 @@
     "coverageDirectory": "coverage",
     "coveragePathIgnorePatterns": [
       "node_modules",
-      "package.json"
+      "package.json",
+      "lib"
     ],
     "coverageReporters": [
       "html",
