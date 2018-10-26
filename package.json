@@ -1,0 +1,46 @@
+{
+  "name": "ttb-node-sdk",
+  "version": "1.0.0",
+  "description": "A SDK to communicate with TheTimeBilling Rest API",
+  "scripts": {
+    "build": "babel src -d lib",
+    "lint-staged": "lint-staged",
+    "prettify": "prettier \"**/*.{js,jsx,json,css,md,scss}\" --write"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ],
+    "*.{json,css,md,scss}": [
+      "prettier --write",
+      "stylelint",
+      "git add"
+    ]
+  },
+  "gitHooks": {
+    "pre-commit": "yarn lint-staged"
+  },
+  "author": "Daniel Ochoa",
+  "license": "MIT",
+  "devDependencies": {
+    "@5rabbits/eslint-config": "^1.0.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
+    "stylelint": "^9.6.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "yorkie": "^2.0.0"
+  }
+}
