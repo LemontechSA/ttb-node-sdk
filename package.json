@@ -5,7 +5,31 @@
   "scripts": {
     "build": "babel src -d lib",
     "lint-staged": "lint-staged",
+    "test": "jest",
+    "test:watch": "jest jest --watch --coverage",
+    "test:coverage": "jest --coverage",
     "prettify": "prettier \"**/*.{js,jsx,json,css,md,scss}\" --write"
+  },
+  "jest": {
+    "testRegex": ".test.js$",
+    "resolver": "jest-directory-named-resolver",
+    "clearMocks": true,
+    "resetModules": true,
+    "resetMocks": true,
+    "moduleDirectories": [
+      "src",
+      "node_modules"
+    ],
+    "coverageDirectory": "coverage",
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "package.json"
+    ],
+    "coverageReporters": [
+      "html",
+      "text-summary",
+      "text"
+    ]
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -26,9 +50,15 @@
   "license": "MIT",
   "devDependencies": {
     "@5rabbits/eslint-config": "^1.0.2",
-    "@babel/preset-env": "^7.1.0",
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.4.2",
     "eslint": "^5.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
@@ -37,10 +67,17 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "jest-directory-named-resolver": "0.0.1",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3",
     "stylelint": "^9.6.0",
     "stylelint-config-recommended": "^2.1.0",
     "yorkie": "^2.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "lodash": "^4.17.11",
+    "moxios": "^0.4.0"
   }
 }
