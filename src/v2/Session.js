@@ -15,7 +15,8 @@ export default class Session {
       user: params.user,
       password: params.password,
       app_key: params.app_key
-    }).then(response => response.data)
+    })
+    .then(response => response.data)
   }
 
   static validateParams(params, requiredParams) {

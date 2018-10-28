@@ -1,5 +1,5 @@
 export default {
   baseUrl: (subdomain) => (
-    `https://${subdomain}.thetimebilling.com/api/v2`
+    `https://${subdomain}.thetimebilling.com/time_tracking/api/v2`
   )
 }

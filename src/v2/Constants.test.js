@@ -11,7 +11,7 @@ describe('V2 - Constants', () => {
     })
 
     it('generates a tenant url correctly', () => {
-      expect(Constants.baseUrl('lemontech')).toBe('https://lemontech.thetimebilling.com/api/v2')
+      expect(Constants.baseUrl('lemontech')).toBe('https://lemontech.thetimebilling.com/time_tracking/api/v2')
     })
   })
 })
