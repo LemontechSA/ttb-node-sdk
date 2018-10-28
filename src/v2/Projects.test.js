@@ -21,7 +21,7 @@ describe('Projects', () => {
       const project = new Projects('lemontech', '1234')
 
       Moxios.withMock(() => {
-        project.all({}).then((data) => {
+        project.all().then((data) => {
           expect(data[0].id).toBe("57")
           expect(data.length).toBe(2)
         })
