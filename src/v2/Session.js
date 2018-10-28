@@ -15,7 +15,11 @@ export default class Session {
       user: params.user,
       password: params.password,
       app_key: params.app_key
-    }).then(response => response.data)
+    })
+    .then(response => response.data)
+    .catch(reason => {
+      console.log(reason)
+    })
   }
 
   static validateParams(params, requiredParams) {
