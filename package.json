@@ -1,6 +1,6 @@
 {
   "name": "ttb-node-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A SDK to communicate with TheTimeBilling Rest API",
   "main": "dist/ttb-node-sdk.js",
   "scripts": {
