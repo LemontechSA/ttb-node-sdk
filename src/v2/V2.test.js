@@ -84,4 +84,40 @@ describe('V2', () => {
       expect(typeof v2.projects()).toBe('object')
     })
   })
+
+  describe('timeEntries()', () => {
+    it('is defined', () => {
+      const v2 = new V2('lemontech')
+      expect(v2.timeEntries).toBeDefined()
+    })
+
+    it('is a function', () => {
+      const v2 = new V2('lemontech')
+      expect(typeof v2.timeEntries).toBe('function')
+    })
+
+    it('throws an error when calling and authtoken is null', () => {
+      const v2 = new V2('lemontech')
+      expect(() => v2.timeEntries()).toThrow()
+    })
+
+    it('throws an error when only authtoken is defined', () => {
+      const v2 = new V2('lemontech')
+      v2.authToken = '12345'
+      expect(() => v2.timeEntries()).toThrow()
+    })
+
+    it('throws an error when only userId is defined', () => {
+      const v2 = new V2('lemontech')
+      v2.userId = '12345'
+      expect(() => v2.timeEntries()).toThrow()
+    })
+
+    it('return an instance when authtoken and userId is defined', () => {
+      const v2 = new V2('lemontech')
+      v2.authToken = '12345'
+      v2.userId = '12345'
+      expect(typeof v2.timeEntries()).toBe('object')
+    })
+  })
 })
