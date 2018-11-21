@@ -28,7 +28,8 @@
     "coveragePathIgnorePatterns": [
       "node_modules",
       "package.json",
-      "lib"
+      "lib",
+      "dist"
     ],
     "coverageReporters": [
       "html",
